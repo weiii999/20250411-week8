@@ -1,0 +1,71 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px; /* Adjust spacing between menu items */
+  background-color: rgba(103, 143, 141, 0.2); /* Set background color with 0.2 opacity */
+}
+
+.menu li {
+  position: relative; /* Ensure sub-menu is positioned relative to parent */
+  display: inline;
+  height: 50px; /* Set height of menu items */
+}
+
+.menu a {
+  text-decoration: none;
+  color: black; /* Set text color */
+  font-size: 30px; /* Set text size */
+  font-family: "Microsoft JhengHei", sans-serif; /* Set font family */
+  line-height: 50px; /* Vertically center text */
+}
+
+.menu a:hover {
+  color: #FF6670; /* Change text color on hover */
+}
+
+.submenu {
+  display: none; /* Hide sub-menu by default */
+  position: absolute;
+  top: 50px; /* Position below the parent menu item */
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(103, 143, 141, 0.9); /* Set background color with higher opacity */
+}
+
+.submenu li {
+  height: auto; /* Allow sub-menu items to adjust height */
+}
+
+.submenu a {
+  text-decoration: none;
+  color: black; /* Set text color */
+  font-size: 20px; /* Set smaller text size for sub-menu */
+  font-family: "Microsoft JhengHei", sans-serif; /* Set font family */
+  line-height: 40px; /* Vertically center text */
+  padding: 0 10px; /* Add padding for better spacing */
+  display: block; /* Ensure full clickable area */
+}
+
+.menu li:hover .submenu {
+  display: block; /* Show sub-menu on hover */
+}
+
+.submenu a:hover {
+  color: #FF6670; /* Change text color on hover */
+}
